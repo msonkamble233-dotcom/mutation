@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mutation Finder - DNA Sequences</title>
+  <title>Comparison of Two - DNA Sequences</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="container">
-    <h1>🧬 DNA Mutation Finder</h1>
-    <p class="description">Paste two DNA sequences below or upload FASTA files to compare them and find any differences (mutations). You can fetch sequences from the suggested sources.</p>
+    <h1>🧬 DNA COMPARISON</h1>
+    <p class="description">Paste two DNA sequences below or upload FASTA files to compare them and find any differences (comparison). You can fetch sequences from the suggested sources.</p>
 
     <label for="source">Choose DNA source:</label>
     <select id="source">
@@ -49,10 +49,10 @@
         <select id="sequenceSelect2"></select>
     </div>
 
-    <button onclick="findMutations()">🔍 Find Mutations</button>
+    <button onclick="findMutations()">🔍 Find Comparison</button>
 
     <div class="result" id="mutationResult">
-        <p class="initial-message">Your mutation analysis results will appear here.</p>
+        <p class="initial-message">Your Comparison analysis results will appear here.</p>
     </div>
   </div>
 
@@ -64,3 +64,4 @@
   </footer>
 </body>
 </html>
+
