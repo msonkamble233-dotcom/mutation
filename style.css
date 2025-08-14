@@ -1,0 +1,304 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f2f7; /* Lighter blue background */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top for longer content */
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  padding: 20px; /* Add some padding around the container */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+
+/* Add this to your style.css file, at the end or in a logical section */
+.project-credits {
+  text-align: center;
+  margin-top: 50px; /* Space from the main container */
+  padding: 20px;
+  color: #777;
+  font-size: 0.9em;
+  background-color: #f0f8ff; /* A very light blue background */
+  border-top: 1px solid #cce7f0;
+  border-radius: 8px; /* Match container's border-radius slightly */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.project-credits p {
+  margin: 5px 0; /* Adjust line spacing */
+}
+.container {
+  position: relative;
+  max-width: 800px;
+  width: 100%; /* Make it responsive */
+  margin: 40px auto;
+  padding: 30px 40px; /* Increased padding */
+  background-color: #ffffff;
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid #cce7f0; /* Subtle border */
+}
+
+/* ::before for animated padding background */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -30px -40px; /* Match padding */
+  z-index: -1;
+  background: linear-gradient(270deg, #e0f7fa, #e3f2fd, #e8f5e9, #fbe9e7); /* Softer gradient colors */
+  background-size: 600% 600%;
+  animation: paddingGlow 20s ease infinite; /* Slower animation */
+  border-radius: 15px; /* Match container border-radius + padding */
+  opacity: 0.7; /* Slightly transparent */
+}
+
+/* Gradient animation keyframes */
+@keyframes paddingGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Content styling */
+h1 {
+  color: #007acc; /* Deeper blue */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2em;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+    color: #007acc;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #555;
+  line-height: 1.6;
+}
+
+label {
+  font-weight: bold;
+  color: #444;
+  display: block; /* Ensures label takes full width */
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+textarea,
+select,
+button,
+input[type="file"] { /* Added input[type="file"] */
+  width: 100%;
+  margin-bottom: 15px; /* Consistent spacing */
+  padding: 14px; /* Slightly more padding */
+  font-size: 1rem;
+  box-sizing: border-box;
+  border-radius: 8px; /* More rounded */
+  border: 1px solid #dcdcdc; /* Lighter border */
+}
+
+textarea:disabled,
+input[type="file"]:disabled,
+select:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+select {
+  background-color: #f7fcfd; /* Very light blue */
+  cursor: pointer;
+}
+
+button {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background-color: #005f99; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:active {
+  transform: translateY(0); /* Press effect */
+}
+
+.input-info {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: -10px; /* Adjust spacing */
+    margin-bottom: 15px;
+    display: block;
+}
+
+.input-priority-info { /* NEW */
+    font-size: 0.9em;
+    color: #007acc;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.fasta-select-container { /* NEW */
+    margin-top: -5px;
+    margin-bottom: 15px;
+}
+
+.fasta-select-container label {
+    font-weight: normal; /* Less bold than main labels */
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    color: #555;
+}
+
+.hidden { /* NEW */
+    display: none !important;
+}
+
+
+.separator {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 122, 204, 0.75), rgba(0, 0, 0, 0));
+  margin: 30px 0;
+}
+
+.result {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #e3f2fd; /* Light blue background for results */
+  border-left: 6px solid #007acc; /* Prominent left border */
+  border-radius: 8px;
+  color: #2c3e50; /* Darker text for readability */
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.result ul {
+  padding-left: 25px;
+  margin-top: 15px;
+  list-style-type: disc; /* Default disc bullets */
+}
+
+.result li {
+  margin-bottom: 8px;
+}
+
+.result strong {
+    color: #005f99; /* Bold text color */
+}
+
+/* Specific messages styling */
+.result .success-message {
+    color: #28a745; /* Green for success */
+    font-weight: bold;
+}
+
+.result .error-message {
+    color: #dc3545; /* Red for errors */
+    font-weight: bold;
+}
+
+.result .info-message {
+    color: #6c757d; /* Grey for info */
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.result .disclaimer {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #c0e0f0;
+}
+
+.initial-message {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}
+
+.sequence-display { /* NEW */
+    background-color: #f7fcfd;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    white-space: pre-wrap; /* Preserve whitespace and wrap */
+    word-wrap: break-word; /* Break long words */
+    max-height: 200px; /* Limit height */
+    overflow-y: auto; /* Scroll if content exceeds height */
+}
+
+.sequence-display .mutation-highlight { /* NEW */
+    color: #dc3545; /* Red for mutations */
+    font-weight: bold;
+}
+
+.download-button-container { /* NEW */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px auto;
+    padding: 20px 25px;
+  }
+
+  .container::before {
+    margin: -20px -25px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  textarea,
+  select,
+  button,
+  input[type="file"] {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .result {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
+}

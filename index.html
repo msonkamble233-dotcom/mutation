@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutation Finder - DNA Sequences</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🧬 DNA Mutation Finder</h1>
+    <p class="description">Paste two DNA sequences below or upload FASTA files to compare them and find any differences (mutations). You can fetch sequences from the suggested sources.</p>
+
+    <label for="source">Choose DNA source:</label>
+    <select id="source">
+      <option value="ncbi">NCBI - National Center for Biotechnology Info</option>
+      <option value="google">Google Search - DNA Sequences</option>
+    </select>
+
+    <button onclick="openSource()">Open Selected Source</button>
+
+    <hr class="separator">
+
+    <h2>Manual Input:</h2>
+    <label for="dna1">Enter First DNA Sequence:</label>
+    <textarea id="dna1" rows="6" placeholder="e.g., ATCGTACGTACG... (Only A, T, C, G allowed)"></textarea>
+    <small class="input-info">Non-DNA characters will be removed automatically.</small>
+
+    <label for="dna2">Enter Second DNA Sequence:</label>
+    <textarea id="dna2" rows="6" placeholder="e.g., ATCGTAGGTACG... (Only A, T, C, G allowed)"></textarea>
+
+    <hr class="separator">
+
+    <h2>Upload FASTA Files:</h2>
+    <p class="input-priority-info">File uploads will override manual text input.</p>
+
+    <label for="fastaFile1">Upload First FASTA File (.fasta, .fna, .txt):</label>
+    <input type="file" id="fastaFile1" accept=".fasta,.fna,.txt">
+    <div id="fastaSelect1" class="fasta-select-container hidden">
+        <label for="sequenceSelect1">Select Sequence from File 1:</label>
+        <select id="sequenceSelect1"></select>
+    </div>
+
+    <label for="fastaFile2">Upload Second FASTA File (.fasta, .fna, .txt):</label>
+    <input type="file" id="fastaFile2" accept=".fasta,.fna,.txt">
+    <div id="fastaSelect2" class="fasta-select-container hidden">
+        <label for="sequenceSelect2">Select Sequence from File 2:</label>
+        <select id="sequenceSelect2"></select>
+    </div>
+
+    <button onclick="findMutations()">🔍 Find Mutations</button>
+
+    <div class="result" id="mutationResult">
+        <p class="initial-message">Your mutation analysis results will appear here.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <footer class="project-credits">
+    <p>Project by: Sanskruti Raut</p>
+    <p>Guidance by: Samadhan Munde</p>
+  </footer>
+</body>
+</html>
